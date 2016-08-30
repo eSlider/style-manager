@@ -1,9 +1,12 @@
 {
   "name": "mapbender/style-manager",
   "description": "Stylemanager creates stylesets for features and other types of elements",
-  "require": {
-    "viscreation/vis-ui.js": "dev-master"
-  },
+  "require-dev": {
+    "viscreation/vis-ui.js": "dev-master",
+    "components/bootstrap": "^3.3",
+    "components/jquery": "1.x",
+    "debugteam/bootstrap-colorpicker": "1.x"
+},
   "license": "MIT",
   "authors": [
     {
@@ -32,7 +35,6 @@
         }
       }
     },
-
     {
       "type": "package",
       "package": {

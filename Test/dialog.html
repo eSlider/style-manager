@@ -322,18 +322,19 @@
                                 var form = $(e.currentTarget).closest(".ui-dialog").find("form");
                                 console.log(form.formData());
                             }
-                        },{
+                        }, {
                             text:  "Fill",
                             click: function(e) {
                                 var form = $(e.currentTarget).closest(".ui-dialog").find("form");
-                                form.formData({border-size: "0", border-opacity: "1", border-color: "#ff0000", background-size: null, background-color: "#ff0000"…}
-                                {
-                                    "border-size": "6",
-                                    "border-opacity" : '0.5',
-                                    "border-color" : '#ff0000'
-
+                                form.formData({
+                                    "border-size":      "0",
+                                    "border-opacity":   1,
+                                    "border-color":     "#ff0000",
+                                    "background-size":  null,
+                                    "background-color": "#ff0000"
                                 });
-                            }
+
+                            });
                         },{
                             text:  "Reset",
                             click: function(e) {

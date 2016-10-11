@@ -6,7 +6,15 @@
     "components/bootstrap": "^3.3",
     "components/jquery": "1.x",
     "debugteam/bootstrap-colorpicker": "1.x"
-},
+  },
+  "autoload": {
+    "psr-4": {
+      "Mapbender\\StyleManagerBundle\\": "."
+    }
+  },
+  "require": {
+    "php": ">=5.3.3"
+  },
   "license": "MIT",
   "authors": [
     {

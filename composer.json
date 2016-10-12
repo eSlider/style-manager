@@ -4,8 +4,7 @@
   "require-dev": {
     "viscreation/vis-ui.js": "dev-master",
     "components/bootstrap": "^3.3",
-    "components/jquery": "1.x",
-    "debugteam/bootstrap-colorpicker": "1.x"
+    "components/jquery": "1.x"
   },
   "autoload": {
     "psr-4": {
@@ -13,7 +12,8 @@
     }
   },
   "require": {
-    "php": ">=5.3.3"
+    "php": ">=5.3.3",
+    "debugteam/bootstrap-colorpicker": "1.x"
   },
   "license": "MIT",
   "authors": [

@@ -23,33 +23,40 @@
                         title:    "Border",
                         type:     "form",
                         children: [{
-                            title:         "Size",
-                            name:          "border-size",
-                            type:          "input",
-                            mandatory:     "/^\\d+$/",
-                            mandatoryText: "Bitte nur Zahlen verwenden", // range:         "max",
-                            // min:           0,
-                            // max:           10,
-                            // value:         0
-                        }, {
-                            title:         "Color",
-                            type:          "colorPicker",
-                            name:          "border-color",
-                            value:         "#ff0000",
-                            horizontal:    true,
-                            mandatory:     "/^#[a-fA-F0-9]{6}$/",
-                            mandatoryText: "Bitte Farbwähler nutzen"
-                        }, {
-                            title:         "Opacity",
-                            name:          "border-opacity",
-                            type:          "slider",
-                            mandatory:     "/^\\d+$/",
-                            mandatoryText: "Bitte nur Zahlen verwenden",
-                            range:         "max",
-                            min:           0.1,
-                            max:           1,
-                            value:         1,
-                            step:          0.1
+                            type:     'fieldSet',
+                            children: [{
+                                title:         "Size",
+                                name:          "border-size",
+                                type:          "input",
+                                mandatory:     "/^\\d+$/",
+                                mandatoryText: "Bitte nur Zahlen verwenden", // range:         "max",
+                                // min:           0,
+                                // max:           10,
+                                // value:         0
+                                css: { width: "100%"}
+                            }, {
+                                title:         "Color",
+                                type:          "colorPicker",
+                                name:          "border-color",
+                                value:         "#ff0000",
+                                horizontal:    true, // mandatory:     "/^#[a-fA-F0-9]{6}$/",
+                                mandatoryText: "Bitte Farbwähler nutzen",
+                                css: { width: "100%"}
+
+                            }, {
+                                title:         "Opacity",
+                                name:          "border-opacity",
+                                type:          "slider",
+                                mandatory:     "/^\\d+$/",
+                                mandatoryText: "Bitte nur Zahlen verwenden",
+                                range:         "max",
+                                min:           0.1,
+                                max:           1,
+                                value:         1,
+                                step:          0.1,
+                                css: { width: "100%"}
+
+                            }]
                         }]
                     }, {
                         title:    "Background",
@@ -117,35 +124,46 @@
                             children: [{
                                 title:         "X-Offset",
                                 name:          "graphic-xoffset",
-                                type:          "input",
+                                type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
+                                range:         "max",
+                                min:           0,
+                                max:           100,
                                 value:         0,
+                                step:          1,
                                 css:           {
-                                    width: '50%'
+                                    width: '33%'
                                 }
                             }, {
                                 title:         "Y-Offset",
-                                type:          "input",
+                                type:          "slider",
                                 name:          "graphic-yoffset",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
+                                range:         "max",
+                                min:           0,
+                                max:           100,
                                 value:         0,
+                                step:          1,
                                 css:           {
-                                    width: '50%'
+                                    width: '33%'
+                                }
+                            }, {
+                                title:         "Opacity",
+                                name:          "graphic-opacity",
+                                type:          "slider",
+                                mandatory:     "/^\\d+$/",
+                                mandatoryText: "Bitte nur Zahlen verwenden",
+                                range:         "max",
+                                min:           0.1,
+                                max:           1,
+                                value:         1,
+                                step:          0.1,
+                                css:           {
+                                    width: '34%'
                                 }
                             }]
-                        }, {
-                            title:         "Opacity",
-                            name:          "graphic-opacity",
-                            type:          "slider",
-                            mandatory:     "/^\\d+$/",
-                            mandatoryText: "Bitte nur Zahlen verwenden",
-                            range:         "max",
-                            min:           0.1,
-                            max:           1,
-                            value:         1,
-                            step:          0.1
                         }, {
                             title:       "External graphic",
                             type:        "input",
@@ -157,79 +175,104 @@
                         title:    "Stroke",
                         type:     "form",
                         children: [{
-                            title:         "Color",
-                            type:          "colorPicker",
-                            name:          "stroke-color",
-                            value:         "#ff0000",
-                            horizontal:    true,
-                            mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
-                            mandatoryText: "Bitte Farbwähler nutzen"
+                            type: 'fieldSet',
+                            children:[{
+                                title:         "Color",
+                                type:          "colorPicker",
+                                name:          "stroke-color",
+                                value:         "#ff0000",
+                                horizontal:    true,
+                                mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
+                                mandatoryText: "Bitte Farbwähler nutzen",
+                                css: {width: "30%"}
+
+                            }, {
+                                title:         "Opacity",
+                                name:          "stroke-opacity",
+                                type:          "slider",
+                                mandatory:     "/^\\d+$/",
+                                mandatoryText: "Bitte nur Zahlen verwenden",
+                                range:         "max",
+                                min:           0.1,
+                                max:           1,
+                                value:         1,
+                                step:          0.1,
+                                css: {width: "35%"}
+
+                            }, {
+                                title: "Width",
+                                type:  "slider",
+                                name:  "stroke-size",
+                                min:   0,
+                                max:   100,
+                                step:  1,
+                                css: {width: "35%"}
+                            }]
                         }, {
-                            title:         "Opacity",
-                            name:          "stroke-opacity",
-                            type:          "slider",
-                            mandatory:     "/^\\d+$/",
-                            mandatoryText: "Bitte nur Zahlen verwenden",
-                            range:         "max",
-                            min:           0.1,
-                            max:           1,
-                            value:         1,
-                            step:          0.1
-                        }, {
-                            title: "Width",
-                            type:  "input",
-                            name:  "stroke-size",
-                            value: "100"
-                        }, {
-                            title:   "Linecap",
-                            name:    "stroke-linecap",
-                            type:    "select",
-                            options: {
-                                round:  "round",
-                                square: "square",
-                                butt:   "butt"
-                            },
-                            value:   "round"
-                        }, {
-                            title:   "Dashstyle",
-                            name:    "stroke-dashstyle",
-                            type:    "select",
-                            options: {
-                                Solid:           'Solid',
-                                ShortDash:       'ShortDash',
-                                ShortDot:        'ShortDot',
-                                ShortDashDot:    'ShortDashDot',
-                                ShortDashDotDot: 'ShortDashDotDot',
-                                Dot:             'Dot',
-                                Dash:            'Dash',
-                                LongDash:        'LongDash',
-                                DashDot:         'DashDot',
-                                LongDashDot:     'LongDashDot',
-                                LongDashDotDot:  'LongDashDotDot'
-                            },
-                            value:   "Solid"
+                            type: 'fieldSet',
+                            children: [
+                                {
+                                    title:   "Linecap",
+                                    name:    "stroke-linecap",
+                                    type:    "select",
+                                    options: {
+                                        round:  "round",
+                                        square: "square",
+                                        butt:   "butt"
+                                    },
+                                    value:   "round",
+                                    css: {width: "50%"}
+                                }, {
+                                    title:   "Dashstyle",
+                                    name:    "stroke-dashstyle",
+                                    type:    "select",
+                                    options: {
+                                        Solid:           'Solid',
+                                        ShortDash:       'ShortDash',
+                                        ShortDot:        'ShortDot',
+                                        ShortDashDot:    'ShortDashDot',
+                                        ShortDashDotDot: 'ShortDashDotDot',
+                                        Dot:             'Dot',
+                                        Dash:            'Dash',
+                                        LongDash:        'LongDash',
+                                        DashDot:         'DashDot',
+                                        LongDashDot:     'LongDashDot',
+                                        LongDashDotDot:  'LongDashDotDot'
+                                    },
+                                    value:   "Solid",
+                                    css: {width: "50%"}
+
+                                }
+                            ]
                         }]
                     }, {
                         title:    "Fill",
                         type:     "form",
                         children: [{
-                            title:         "Color",
-                            type:          "colorPicker",
-                            name:          "fill-color",
-                            value:         "#ff0000",
-                            mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
-                            mandatoryText: "Bitte Farbwähler nutzen"
-                        }, {
-                            title:         "Opacity",
-                            name:          "fill-opacity",
-                            type:          "slider",
-                            mandatory:     "/^\\d+$/",
-                            mandatoryText: "Bitte nur Zahlen verwenden",
-                            range:         "max",
-                            min:           0.1,
-                            max:           1,
-                            value:         1,
-                            step:          0.1
+                            type:     'fieldSet',
+                            children: [{
+                                title:         "Color",
+                                type:          "colorPicker",
+                                name:          "fill-color",
+                                value:         "#ff0000",
+                                mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
+                                mandatoryText: "Bitte Farbwähler nutzen",
+                                css: {width: "50%"}
+
+                            }, {
+                                title:         "Opacity",
+                                name:          "fill-opacity",
+                                type:          "slider",
+                                mandatory:     "/^\\d+$/",
+                                mandatoryText: "Bitte nur Zahlen verwenden",
+                                range:         "max",
+                                min:           0.1,
+                                max:           1,
+                                value:         1,
+                                step:          0.1,
+                                css: {width: "50%"}
+
+                            }]
                         }]
                     }, {
                         title:    "Misc",
@@ -295,7 +338,8 @@
                             "border-opacity":   1,
                             "border-color":     "#ff0000",
                             "background-size":  null,
-                            "background-color": "#ff0000"
+                            "background-color": "#ff0000",
+                            "graphic-opacity": "0.5"
                         });
                     }
                 }, {

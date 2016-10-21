@@ -12,7 +12,7 @@
          * @param element jQuery object
          */
         genForm: function(element) {
-
+            var widget = this;
             return element.generateElements({
                 type:     "popup",
                 title:    "Style manager",
@@ -27,12 +27,15 @@
                             children: [{
                                 title:         "Size",
                                 name:          "border-size",
-                                type:          "input",
+                                min:           0,
+                                max:           10,
+                                step:          1,
+                                type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden", // range:         "max",
                                 // min:           0,
                                 // max:           10,
-                                // value:         0
+                                value:         0,
                                 css: { width: "100%"}
                             }, {
                                 title:         "Color",
@@ -110,6 +113,7 @@
                                 name:          "graphic-width",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
+                                value:         0,
                                 css:           {width: '50%'}
                             }, {
                                 title:         "Height",
@@ -156,10 +160,10 @@
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
                                 range:         "max",
-                                min:           0.1,
+                                min:           0,
                                 max:           1,
                                 value:         1,
-                                step:          0.1,
+                                step:          0.01,
                                 css:           {
                                     width: '34%'
                                 }
@@ -204,8 +208,9 @@
                                 type:  "slider",
                                 name:  "stroke-size",
                                 min:   0,
-                                max:   100,
-                                step:  1,
+                                max:   10,
+                                step:  0.1,
+                                value: 1,
                                 css: {width: "35%"}
                             }]
                         }, {
@@ -352,8 +357,11 @@
 
                     text:  "Submit",
                     click: function(e) {
-                        var form = $(e.currentTarget).closest(".ui-dialog")
-                        console.log(data);
+                        var form = $(e.currentTarget).closest(".ui-dialog");
+                        widget._trigger('submit', null, {
+                            form: form,
+                            widget: widget
+                        });
                     }
                 }]
             });

@@ -26,7 +26,7 @@
                             type:     'fieldSet',
                             children: [{
                                 title:         "Size",
-                                name:          "border-size",
+                                name:          "borderSize",
                                 min:           0,
                                 max:           10,
                                 step:          1,
@@ -40,7 +40,7 @@
                             }, {
                                 title:         "Color",
                                 type:          "colorPicker",
-                                name:          "border-color",
+                                name:          "borderColor",
                                 value:         "#ff0000",
                                 horizontal:    true, // mandatory:     "/^#[a-fA-F0-9]{6}$/",
                                 mandatoryText: "Bitte Farbwähler nutzen",
@@ -48,7 +48,7 @@
 
                             }, {
                                 title:         "Opacity",
-                                name:          "border-opacity",
+                                name:          "borderOpacity",
                                 type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
@@ -67,21 +67,21 @@
                         children: [{
                             title:         "Size",
                             type:          "input",
-                            name:          "background-size",
+                            name:          "backgroundSize",
                             value:         "",
                             mandatory:     "/^\\d+$/",
                             mandatoryText: "Bitte nur Zahlen verwenden"
                         }, {
                             title:         "Color",
                             type:          "colorPicker",
-                            name:          "background-color",
+                            name:          "backgroundColor",
                             value:         "#ff0000",
                             horizontal:    true,
                             mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
                             mandatoryText: "Bitte Farbwähler nutzen"
                         }, {
                             title:         "Opacity",
-                            name:          "background-opacity",
+                            name:          "backgroundOpacity",
                             type:          "slider",
                             mandatory:     "/^\\d+$/",
                             mandatoryText: "Bitte nur Zahlen verwenden",
@@ -93,7 +93,7 @@
                         }, {
                             title:       "Image",
                             type:        "input",
-                            name:        "background-url",
+                            name:        "backgroundUrl",
                             value:       "",
                             placeholder: "URL"
                         }]
@@ -103,14 +103,14 @@
                         children: [{
                             title: "Name",
                             type:  "input",
-                            name:  "graphic-name",
+                            name:  "graphicName",
                             value: ""
                         }, {
                             type:     'fieldSet',
                             children: [{
                                 title:         "Width",
                                 type:          "input",
-                                name:          "graphic-width",
+                                name:          "graphicWidth",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
                                 value:         0,
@@ -118,7 +118,7 @@
                             }, {
                                 title:         "Height",
                                 type:          "input",
-                                name:          "graphic-height",
+                                name:          "graphicHeight",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
                                 css:           {width: '50%'}
@@ -127,7 +127,7 @@
                             type:     'fieldSet',
                             children: [{
                                 title:         "X-Offset",
-                                name:          "graphic-xoffset",
+                                name:          "graphicXOffset",
                                 type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
@@ -142,7 +142,7 @@
                             }, {
                                 title:         "Y-Offset",
                                 type:          "slider",
-                                name:          "graphic-yoffset",
+                                name:          "graphicYOffset",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
                                 range:         "max",
@@ -155,7 +155,7 @@
                                 }
                             }, {
                                 title:         "Opacity",
-                                name:          "graphic-opacity",
+                                name:          "graphicOpacity",
                                 type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
@@ -171,7 +171,7 @@
                         }, {
                             title:       "External graphic",
                             type:        "input",
-                            name:        "graphic-url",
+                            name:        "graphicUrl",
                             value:       "",
                             placeholder: "URL"
                         }]
@@ -183,7 +183,7 @@
                             children:[{
                                 title:         "Color",
                                 type:          "colorPicker",
-                                name:          "stroke-color",
+                                name:          "strokeColor",
                                 value:         "#ff0000",
                                 horizontal:    true,
                                 mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
@@ -192,7 +192,7 @@
 
                             }, {
                                 title:         "Opacity",
-                                name:          "stroke-opacity",
+                                name:          "strokeOpacity",
                                 type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
@@ -206,7 +206,7 @@
                             }, {
                                 title: "Width",
                                 type:  "slider",
-                                name:  "stroke-size",
+                                name:  "strokeSize",
                                 min:   0,
                                 max:   10,
                                 step:  0.1,
@@ -218,7 +218,7 @@
                             children: [
                                 {
                                     title:   "Linecap",
-                                    name:    "stroke-linecap",
+                                    name:    "strokeLineCap",
                                     type:    "select",
                                     options: {
                                         round:  "round",
@@ -229,7 +229,7 @@
                                     css: {width: "50%"}
                                 }, {
                                     title:   "Dashstyle",
-                                    name:    "stroke-dashstyle",
+                                    name:    "strokeDashStyle",
                                     type:    "select",
                                     options: {
                                         Solid:           'Solid',
@@ -258,7 +258,7 @@
                             children: [{
                                 title:         "Color",
                                 type:          "colorPicker",
-                                name:          "fill-color",
+                                name:          "fillColor",
                                 value:         "#ff0000",
                                 mandatory:     "/^#{1,1}[abcdefABCDEF0-9]{6,6}$/",
                                 mandatoryText: "Bitte Farbwähler nutzen",
@@ -266,7 +266,7 @@
 
                             }, {
                                 title:         "Opacity",
-                                name:          "fill-opacity",
+                                name:          "fillOpacity",
                                 type:          "slider",
                                 mandatory:     "/^\\d+$/",
                                 mandatoryText: "Bitte nur Zahlen verwenden",
@@ -284,7 +284,7 @@
                         type:     "form",
                         children: [{
                             title:         "Point Radius",
-                            name:          "misc-pointradius",
+                            name:          "pointRadius",
                             type:          "slider",
                             mandatory:     "/^\\d+$/",
                             mandatoryText: "Bitte nur Zahlen verwenden",
@@ -294,7 +294,7 @@
                             value:         0
                         }, {
                             title:   "Cursor",
-                            name:    "misc-cursor",
+                            name:    "cursor",
                             type:    "select",
                             options: {
                                 auto:        'auto',
@@ -317,12 +317,12 @@
                             value:   "pointer"
                         }, {
                             title: "Rotation (°)",
-                            name:  "misc-rotation",
+                            name:  "rotation",
                             type:  "input",
                             value: "Angle"
                         }, {
                             title:   "Display",
-                            name:    "misc-display",
+                            name:    "display",
                             type:    "select",
                             options: {
                                 inline:         "inline",

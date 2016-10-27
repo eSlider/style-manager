@@ -335,7 +335,7 @@
                     }]
                 }],
                 buttons:  [{
-                    text:  "Fill",
+                    text:  "Default",
                     click: function(e) {
                         var form = $(e.currentTarget).closest(".ui-dialog");
                         form.formData({
